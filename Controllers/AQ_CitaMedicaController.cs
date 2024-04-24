@@ -46,7 +46,7 @@ namespace AnahiQuezada_Examen1P.Controllers
         // GET: AQ_CitaMedica/Create
         public IActionResult Create()
         {
-            return View();
+            return View("AQ_Create");
         }
 
         // POST: AQ_CitaMedica/Create
