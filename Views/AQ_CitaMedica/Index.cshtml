@@ -1,0 +1,53 @@
+﻿@model IEnumerable<AnahiQuezada_Examen1P.Models.AQ_CitaMedica>
+
+@{
+    ViewData["Title"] = "Creado por Anahi Quezada";
+}
+
+<h1>Creado por Anahi Quezada</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AQ_Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AQ_Urgente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AQ_Precio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AQ_Fecha)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AQ_Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AQ_Urgente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AQ_Precio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AQ_Fecha)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.AQ_Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.AQ_Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.AQ_Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
