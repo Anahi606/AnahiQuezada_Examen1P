@@ -15,12 +15,12 @@ namespace AnahiQuezada_Examen1P.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View("AQ_Index");
         }
 
         public IActionResult Privacy()
         {
-            return View();
+            return View("AQ_Privacy");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
